@@ -1,7 +1,8 @@
-from chibi_requests import Response, Chibi_url
-from chibi.atlas import Chibi_atlas
-from functools import reduce
 from datetime import datetime
+from functools import reduce
+
+from chibi.atlas import Chibi_atlas
+from chibi_requests import Response
 
 
 class Thread_list( Response ):

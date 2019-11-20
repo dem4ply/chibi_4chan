@@ -49,6 +49,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/dem4ply/chibi_4chan',
-    version='0.0.1',
+    version='0.5.0',
     zip_safe=False,
 )
