@@ -37,4 +37,4 @@ class Test_threads( VCRTestCase ):
                 if post.has_image:
                     self.assertIsInstance( post.image_url, Chibi_url )
                 else:
-                    self.assertIsNone( post.image_url )
+                    self.assertNotIn( 'image_url', post )
