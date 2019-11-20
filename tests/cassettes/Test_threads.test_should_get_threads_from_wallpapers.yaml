@@ -1,0 +1,178 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: http://a.4cdn.org/w/threads.json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAACA3Ray45lRQ78l1r3wu9M8ysIoZa6ZqYlXgJ2iH/Hp0qacjT2tou4mWk7wmEfvv/r
+        5bfP/319+Y4/vfz5v99fP3/54+W77/96+eXX+icPN89PLz99/uPPH3/+9cvX/3x9/VL/ricyhKz+
+        9Pvrbz99fS0M/f3pHSVsec75N8qPnivM0lB6PmDKrLHA+Dp12G2nnbDltJOe0WBXP2DOFLLA6pa3
+        wbihiGRF8e1Pk9veZld8w0nw6aeJd5zmhiM2brhz4HFyZ1iIODyOAGa5wVT7La3dkWyLpN8Deaua
+        aflOTltwHNSLS6Udp4eXfDvVA3q+uZfJW+VNMMuUDrP8P4zSlXSBFQV6SCp+f//wIN8JJf8m1JNP
+        luXyT5V7/7lWBnyKcRus6qCHitqjOcKXOlBTupAaiLExzTgJ1+2aYseWGNfPA/GLKx84Ut7YUS/3
+        TmHl6EKjuTyvIn07rpGDgu+CousJ9ZrZuZ9L7iJTOWd2kHvoFpMTB972wUUyl+PLacagT3L7eaUf
+        2y3ppvYcaGdxaeVcYnFL7CF3XTPqcF5YzCqgGcWkxv6SZlrOq0ZgIFGnE0tHYolxbD9XtQfXb88u
+        8V2YFaXoB3DZGXLq4TMusvpOw30QhA7n0uIKxQlq4j1YVSxzyRa/E3B+4JJnuaTTvb1iBWh1aSkh
+        O6QBNO4ZZV9Oq7+Zzgpbb+OlpUYlLnvhXTjN7lI/lGp4yRZKSb9LwilSvxX0HkufcSUZyltQJHmp
+        S7/1hITG35ujytJU/RQf4JrRnkeVuuWa6t/QWKjTykZameX2c+qCatKipe9dYsKVkcBnd1V4VJs3
+        nIC/MoDZepwgrFVeFfrCfafnmv2S3kvBaPG3ZUAYrESrWCoy5gwrwgUUOvfHqZnrirsOEqX9eUzb
+        eRQK0uZd2krZlvNK0iF31j0n+dKMLSoyMeaA0soZLCiz0x93pMVSlebUmVc/MjA2LeVEfmPBlddD
+        9gukXJeY6Dem07izykdWVRdYfo1r6AItCZCghYwFEwGYAad4JofRFXBJrC0zN5cOp88wgzDA6RLi
+        ciCXCXAfr6NqtoswP20H2dhx596FHhVkA0GvVt899dXlffHepkezSjUs8Fznj6RDxTLBABKL4anG
+        ydrjYpC9I0s4q3GCtIETvzbnXPkktgECFyjEC640MJdaqTv6/DbJegBW5gVa2ZwDqe54u0RVyhut
+        YqIVWyz8qDgZjB/iPTPXl8yUBT9A7i4Jddhy9zgudzEEZMQbLAh8ywV2mPACq2EBxZxbtcbGYvFL
+        DriIXkAaseCO4hghbRxQIV1y4PK2J/goV5itdHFzlakI2AWA47wz9aUcGeqotFZVT1h88TOSwXhb
+        bGkp97XMqdLj28Yi72IdOeMALDo5YrNynIQ2vGegPMjiarhcRlwYUxulzkSpKrxFD+rHGKZX7qa+
+        OhzN5VN5eRvaPyLV5Ud8ka0SSIbEKOQzlxbA/C5obfjrRk7OMtHXf/b2p48I93XF4cWklp1hiDA7
+        BGUbPWpiQdPSJ9RqjMvMWEPhlY2JxjVHz6fVYAVS3kdNO5fm9kZlRCXXqqMtJqV3sATsjoZ41n/J
+        K7j4gafd5Y4PTKAFKytckpbjggSddE9bWYUZ5dXf0Jh0Rt3Z+52k+dfEA5jRSo6TZ//5oEwBdfoY
+        6TLzsHCPnPUiiD46HFmOK/5SLF6s8kkzoZ4xmMFem3fLSLNkSRLngcatkJmcvZHcNIVrUh85lu8M
+        xaYaI8HjgP2OZZ4qhmriLHz643zu3GW9g8DX9kHe3GefULAa0GxZwdIx8hnmlYPctuP55tImWJH+
+        3iWS1b5kRj0zJmxSGYTwxvI2ZdzAwjCV84qCZ/Ev01eSBbtqBes5b4GlbBHyUEEeQ+cn13B/cKiO
+        Hqk726mCEeEMhqsGuQvumkAVMPf1Cy1VcDiddGlsVjPFfFqcODD5w7etO2/9y9DKgWz2LTznnWkR
+        zySO++Z+Wjgvpz1CnWs7DPblvJovYTi4MA/prNbP08DO9vAfnjc9j1c/2J+6WFeI50qOclsgg9kj
+        WWmbK7nkBfeuCXR6ZvHpE9V2C3++juj2GVZSNpjFBb2CSl1mr2prZe5pc3yVsvnN/qzLOp/CGg15
+        o5OTCCzEGT7fps67gmfOPqGbcaixbUZFGnw7DAHjlsthNXidrWfXafNwIvrsjWT5eJs879+edWui
+        A+uH3Zz3bw8M19M9jB5nrpGKY5yuuTB23ZwdsEhJDHwqAjUrqzUzvqaaC2tahv+fwOZLasizxP3G
+        XHY+8fxlKraPovG4bRgapX7vh38AAAD//wMAZXJ0g5QhAAA=
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Headers:
+      - If-Modified-Since
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - http://boards.4chan.org
+      Access-Control-Max-Age:
+      - '1728000'
+      CF-Cache-Status:
+      - MISS
+      CF-RAY:
+      - 535d8a42ae68b30e-MEX
+      Cache-Control:
+      - public, must-revalidate, proxy-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1745'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 15 Nov 2019 01:44:27 GMT
+      ETag:
+      - '"5dce0262-6d1"'
+      Expires:
+      - '-1'
+      Last-Modified:
+      - Fri, 15 Nov 2019 01:41:54 GMT
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      - Origin, Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.22.0
+    method: GET
+    uri: http://a.4cdn.org/w/threads.json
+  response:
+    body:
+      string: !!binary |
+        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
+    headers:
+      Accept-Ranges:
+      - bytes
+      Access-Control-Allow-Headers:
+      - If-Modified-Since
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - http://boards.4chan.org
+      Access-Control-Max-Age:
+      - '1728000'
+      CF-Cache-Status:
+      - MISS
+      CF-RAY:
+      - 535d8a42ae68b30e-MEX
+      Cache-Control:
+      - public, must-revalidate, proxy-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1745'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 15 Nov 2019 01:44:27 GMT
+      ETag:
+      - '"5dce0262-6d1"'
+      Expires:
+      - '-1'
+      Last-Modified:
+      - Fri, 15 Nov 2019 01:41:54 GMT
+      Server:
+      - cloudflare
+      Vary:
+      - Accept-Encoding
+      - Origin, Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1
