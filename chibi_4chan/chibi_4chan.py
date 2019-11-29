@@ -9,7 +9,11 @@ threads = Chibi_url(
 thread = Chibi_url(
     'http://a.4cdn.org/{board}/thread/{thread_number}.json',
     response_class=Post )
+
 image = Chibi_url( 'http://i.4cdn.org/{board}/{image}{ext}' )
+
+human_thread = Chibi_url(
+    'http://boards.4channel.org/{board}/thread/{thread_number}' )
 
 
 boards = Chibi_atlas( {

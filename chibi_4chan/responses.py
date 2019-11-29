@@ -11,7 +11,7 @@ class Thread_list( Response ):
         try:
             return self._native
         except AttributeError:
-            from chibi_4chan.chibi_4chan import thread
+            from chibi_4chan.chibi_4chan import thread, human_thread
             native = super().native
             del self._native
 
@@ -19,12 +19,14 @@ class Thread_list( Response ):
                 ( lambda x, y: x + y ),
                 ( page[ 'threads' ] for page in native) )
 
-            self._native = [
-                thread.format(
+            self._native = []
+            for t in threads:
+                last_modified = datetime.fromtimestamp( t[ 'last_modified' ] )
+                human_url = human_thread.format(
                     board=self.url.kw.board, thread_number=t[ 'no' ],
-                    replies=t[ 'replies' ],
-                    last_modified=datetime.fromtimestamp( t[ 'last_modified' ] ) )
-                for t in threads ]
+                    replies=t[ 'replies' ], last_modified=last_modified )
+                self._native.append(
+                    thread.format( human_url=human_url, **human_url.kw ) )
             return self._native
 
 

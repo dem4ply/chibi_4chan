@@ -27,7 +27,6 @@ class Test_threads( VCRTestCase ):
             self.assertEqual( thread.kw.board, 'w' )
             self.assertIsInstance( thread.kw.last_modified, datetime.datetime )
 
-
     def test_each_tread_should_get_the_post( self ):
         response = boards.w.get()
         self.assertEqual( response.status_code, 200 )
