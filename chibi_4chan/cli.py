@@ -9,6 +9,8 @@ from prettytable import PrettyTable
 
 from chibi_4chan import boards
 from chibi_4chan.boards import boards as human_boards
+from chibi_4chan.chibi_4chan import thread as thread_url
+from chibi.file import Chibi_path
 
 
 logger_formarter = '%(levelname)s %(name)s %(asctime)s %(message)s'
@@ -22,11 +24,35 @@ def prepare_parser():
         fromfile_prefix_chars='@' )
     parser.add_argument( 'board', help="board of 4chan" )
 
+    parser.add_argument( 'threads', nargs='*', help="thread number" )
+    parser.add_argument(
+        '--dest', '-d', dest='dest', type=Chibi_path,
+        help="folder where is going to download the images" )
+
     parser.add_argument(
         "--log_level", dest="log_level", default="INFO",
         help="log level", )
     args = parser.parse_args()
     return args
+
+
+def download_thread( board, thread_number, folder ):
+    url = thread_url.format( board=board, thread_number=thread_number  )
+    posts = url.get().native
+    if 'title' in posts[0]:
+        title = posts[0].title
+    else:
+        title = thread_number
+    dest = folder + title
+    if not dest.exists:
+        dest.mkdir()
+    for post in posts:
+        if post.has_image:
+            image_dest = dest + post.image_url.base_name
+            if image_dest.exists:
+                logger.info( f"se encontro '{image_dest}'" )
+                continue
+            post.image_url.download( image_dest )
 
 
 def print_board( board ):
@@ -37,22 +63,16 @@ def print_board( board ):
     table.field_names = [
         'thread number', 'replies', 'last modified', 'message', 'url' ]
     for thread in threads.native:
-        posts = thread.get()
-        post_first = posts.native[0]
-
-        if 'sub' in post_first:
-            sub = post_first.sub
+        if 'title' in thread:
+            title = thread.title
         else:
-            sub = ''
+            title = ''
 
-        if 'com' in post_first and sub != post_first.com:
-            sub += f"\n{post_first.com}"
-
-        delta = thread.kw.last_modified - datetime.datetime.now()
+        delta = thread.last_modified - datetime.datetime.now()
         last_modified = format_timedelta( delta, locale='es_MX' )
         table.add_row( [
-            thread.kw.thread_number, thread.kw.replies, last_modified,
-            sub, str( thread.kw.human_url ) ] )
+            thread.id, thread.replies, last_modified,
+            title, str( thread.url ) ] )
     print( table )
 
 
@@ -75,7 +95,11 @@ def main():
         logger.error( f"board {board} is not in the list" )
         return 1
 
-    print_board( board )
+    if args.threads:
+        for thread_number in args.threads:
+            download_thread( board, thread_number, args.dest )
+    else:
+        print_board( board )
 
     return 0
 

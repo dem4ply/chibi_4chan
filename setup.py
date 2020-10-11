@@ -11,7 +11,9 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ 'chibi_request==0.5', 'babel=2.7.0', 'PTable>=0.9.2' ]
+requirements = [
+    'chibi-requests>=0.5', 'babel>=2.7.0', 'PTable>=0.9.2',
+    'chibi-marshmallow>=0.0.1' ]
 
 setup_requirements = [ ]
 

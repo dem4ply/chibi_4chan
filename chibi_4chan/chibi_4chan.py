@@ -1,8 +1,13 @@
 from chibi_requests import Chibi_url
 from .boards import boards as boards_atlas
 from chibi.atlas import Chibi_atlas
-from chibi_4chan.responses import Thread_list, Post
+from chibi_4chan.responses import Thread_list, Post, Catalog
 
+
+main = Chibi_url( 'http://a.4cdn.org' )
+
+catalog = Chibi_url(
+    'http://a.4cdn.org/{board}/catalog.json', response_class=Catalog )
 
 threads = Chibi_url(
     'http://a.4cdn.org/{board}/threads.json', response_class=Thread_list )
@@ -17,5 +22,5 @@ human_thread = Chibi_url(
 
 
 boards = Chibi_atlas( {
-    board: threads.format( board=board )
+    board: catalog.format( board=board )
     for board in boards_atlas.keys() } )

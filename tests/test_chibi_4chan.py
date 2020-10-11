@@ -5,6 +5,27 @@ from chibi_requests import Chibi_url
 from vcr_unittest import VCRTestCase
 
 from chibi_4chan import boards
+from chibi_4chan.chibi_4chan import main, catalog
+
+
+class Test_catalog_url( VCRTestCase ):
+    def test_each_thread_should_have_a_url( self ):
+        response = catalog.format( board='w' ).get()
+        self.assertEqual( response.status_code, 200 )
+        for thread in response.native:
+            self.assertIn( 'url', thread )
+            self.assertTrue( thread.url )
+            self.assertIsInstance( thread.url, Chibi_url )
+
+    def test_each_thread_should_have_a_title( self ):
+        response = catalog.format( board='w' ).get()
+        self.assertEqual( response.status_code, 200 )
+        thread_with_title = list(
+            thread for thread in response.native if 'title' in thread )
+        self.assertTrue( thread_with_title )
+        for thread in thread_with_title:
+            self.assertIn( 'title', thread )
+            self.assertTrue( thread.title )
 
 
 class Test_threads( VCRTestCase ):
@@ -18,22 +39,20 @@ class Test_threads( VCRTestCase ):
         response = boards.w.get()
         self.assertEqual( response.status_code, 200 )
         for thread in response.native:
-            self.assertIsInstance( thread, Chibi_url )
-            self.assertIn( 'board', thread.kw )
-            self.assertIn( 'last_modified', thread.kw )
-            self.assertIn( 'replies', thread.kw )
-            self.assertIn( 'thread_number', thread.kw )
+            self.assertIsInstance( thread.url, Chibi_url )
+            self.assertIn( 'last_modified', thread )
+            self.assertIn( 'replies', thread )
+            self.assertIn( 'id', thread )
 
-            self.assertEqual( thread.kw.board, 'w' )
-            self.assertIsInstance( thread.kw.last_modified, datetime.datetime )
+            self.assertIsInstance( thread.last_modified, datetime.datetime )
 
     def test_each_tread_should_get_the_post( self ):
         response = boards.w.get()
         self.assertEqual( response.status_code, 200 )
         for thread in response.native[:5]:
-            thread_response = thread.get()
+            thread_response = thread.url.get()
             for post in thread_response.native:
-                self.assertIsInstance( post.time, datetime.datetime )
+                self.assertIsInstance( post.created_at, datetime.datetime )
                 if post.has_image:
                     self.assertIsInstance( post.image_url, Chibi_url )
                 else:
